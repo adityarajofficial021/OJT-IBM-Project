@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockDash - Market Analysis</title>
+    <link rel="stylesheet" href="market.css">
+        <link rel="icon" type="image/png" href="image.png" >
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    
+</head>
+<body>
+
+   <header class="headerbar">
+    <div class="logo">Stock<span>Dash</span></div>
+    
+    <nav>
+        <ul>
+            <li id="nav-dash" ><a href="dashboard.html">Dashboard</a></li>
+            <li id="nav-port"><a href="portfolio.html">Portfolio</a></li>
+            <li id="nav-mark" class="active-link"><a href="market.html">Market</a></li>
+        </ul>
+    </nav>
+    
+    <div class="user">NextGen Devs</div>
+</header>
+
+    <main class="main-content">
+        <h1>NVIDIA Corporation (NVDA)</h1>
+        
+        <div class="chart-box">
+            <canvas id="liveChart"></canvas>
+        </div>
+    </main>
+
+   <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="logo">Stock<span>Dash</span></div>
+                <p>The world's most advanced retail trading dashboard. Real-time data, instant execution.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li>Help Center</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>📧 support@stockdash.com</p>
+                <p>📞 +1 (555) 000-1234</p>
+                <p>📍 Wall Street, NY</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 StockDash Portfolio Tracker. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const canvas = document.getElementById('liveChart');
+            
+            if (!canvas) {
+                console.error("Canvas element not found!");
+                return;
+            }
+
+            const ctx = canvas.getContext('2d');
+            
+            const labels = ['9:00', '10:00', '11:00', '12:00', '1:00', '2:00', '3:00', '4:00'];
+            const prices = [468, 472, 470, 478, 482, 479, 485, 480];
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'NVDA Price',
+                        data: prices,
+                        borderColor: '#00d4ff',
+                        backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false, // Allows it to fill the chart-box height
+                    scales: {
+                        y: { beginAtZero: false }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>

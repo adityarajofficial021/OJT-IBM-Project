@@ -1,0 +1,90 @@
+    /* RESET & BASE */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* LOGIN CARD */
+        .login-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .logo { 
+            font-size: 32px; 
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+        .logo span { color: #00d4ff; }
+
+        /* INPUTS */
+        .input-group {
+            margin-bottom: 12px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        /* Shows red border if Regex fails when typing */
+        input:invalid {
+            border-color: #ff4d4d;
+        }
+
+        /* BUTTONS */
+        .btn-box {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background-color: #1a1a2e;
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-secondary {
+            background: none;
+            border: 1px solid #1a1a2e;
+            color: #1a1a2e;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover { background-color: #00d4ff; color: #1a1a2e; }

@@ -1,0 +1,136 @@
+  /* header */
+    
+/* GLOBAL RESET */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* HEADERBAR CONTAINER */
+.headerbar {
+    background-color: #1a1a2e; /* Deep navy from your image */
+    color: white;
+    padding: 0 5%;
+    height: 80px; /* Slightly taller for that premium feel */
+    display: flex;
+    justify-content: space-between; /* Logo left, Nav center, User right */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO STYLING */
+.logo { 
+    font-size: 28px; 
+    font-weight: 800; /* Extra bold */
+    letter-spacing: -1px;
+}
+.logo span { color: #00d4ff; }
+
+/* CENTERED NAVIGATION */
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* This perfectly centers the menu */
+}
+
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 40px; /* Space between links */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+/* ACTIVE LINK (The Blue Underline) */
+.active-link a {
+    color: #00d4ff;
+    border-bottom: 3px solid #00d4ff;
+}
+
+/* USER TEXT (Far Right) */
+.user {
+    color: #00d4ff;
+    font-weight: bold;
+    font-size: 18px;
+}
+        /* footer */
+
+       
+        /* FOOTER STYLING */
+        footer {
+            background-color: #1a1a2e;
+            color: #ecf0f1;
+            padding: 50px 5% 20px 5%;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h4 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .footer-section p, .footer-section li {
+            font-size: 0.9rem;
+            line-height: 1.8;
+            color: #a0aec0;
+            list-style: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid #2d3748;
+            font-size: 0.8rem;
+            color: #718096;
+        }
+           /* BASIC STYLING */
+        * { box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+      
+
+        .main-content { flex: 1; width: 90%; max-width: 1200px; margin: 30px auto; }
+
+        /* CHART CONTAINER - Needs specific height for Chart.js */
+        .chart-box {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            position: relative;
+            height: 400px; /* Fixed height helps stability */
+            width: 100%;
+        }
+
+        footer { background-color: #1a1a2e; color: #ecf0f1; padding: 40px 5%; margin-top: auto; }
+        .footer-container { display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
+        .footer-section { flex: 1; }

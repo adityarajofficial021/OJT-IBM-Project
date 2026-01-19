@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockDash - Registration</title>
+   <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="image.png" >
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="logo">Stock<span>Dash</span></div>
+        
+        <form id="regForm">
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="John Doe" required>
+            </div>
+
+            <div class="input-group">
+                <label>Email </label>
+                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="example@mail.com" required title="Please enter a valid email address">
+            </div>
+
+            <div class="input-group">
+                <label>Mobile Number </label>
+                <input type="tel" pattern="[0-9]{10}" placeholder="1234567890" required title="Enter a 10-digit mobile number">
+            </div>
+
+            <div class="input-group">
+                <label>Username </label>
+                <input type="text" pattern="^[a-zA-Z0-9]{4,10}$" placeholder="User123" required title="Username must be 4-10 characters, no spaces">
+            </div>
+
+            <div class="input-group">
+                <label>Password </label>
+                <input type="password" id="pass" pattern=".{6,}" placeholder="Min 6 characters" required title="Password must be at least 6 characters">
+            </div>
+
+            <div class="input-group">
+                <label>Reconfirm Password</label>
+                <input type="password" id="confirm" placeholder="Confirm Password" required>
+            </div>
+
+            <div class="btn-box">
+                <button type="submit" class="btn-primary">Sign Up</button>
+                <button type="button" class="btn-secondary" onclick="window.location.href='dashboard.html'">Already User? Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('regForm');
+        const pass = document.getElementById('pass');
+        const confirm = document.getElementById('confirm');
+
+        form.onsubmit = function(e) {
+            e.preventDefault(); // Stop form from sending to a server
+
+            // Extra check for matching passwords
+            if (pass.value !== confirm.value) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // If all Regex and checks pass, go to dashboard
+            alert("Registration Successful!");
+            window.location.href = 'dashboard.html';
+        };
+    </script>
+
+</body>
+</html>

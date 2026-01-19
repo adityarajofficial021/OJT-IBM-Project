@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockDash - Premium Trading</title>
+  <link rel="stylesheet" href="dashboard.css">
+      <link rel="icon" type="image/png" href="image.png" >
+
+</head>
+
+<body>
+
+<header class="headerbar">
+    <div class="logo">Stock<span>Dash</span></div>
+    
+    <nav>
+        <ul>
+            <li id="nav-dash" class="active-link"><a href="index.html">Dashboard</a></li>
+            <li id="nav-port"><a href="portfolio.html">Portfolio</a></li>
+            <li id="nav-mark"><a href="market.html">Market</a></li>
+        </ul>
+    </nav>
+    
+    <div class="user">NextGen Devs</div>
+</header>
+
+    <main class="main-content">
+        <div class="top-row">
+            <h2>Welcome Back, Trader</h2>
+            <input type="text" id="searchBar" onkeyup="searchTable()" placeholder="🔍 Search symbols (e.g. AAPL)">
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Total Balance</h3>
+                <p id="totalBalance" class="balance-text">$12,450.00</p>
+                <button onclick="addFunds()">+ Quick Add $500</button>
+            </div>
+            <div class="card">
+                <h3>Day Profit</h3>
+                <p class="balance-text">$340.20</p>
+                <span class="up">↑ 1.1% This Morning</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Market Watchlist</h3>
+            <table id="stockTable">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><b>AAPL</b></td><td>$189.20</td><td><button onclick="buyStock('AAPL')">Buy</button></td></tr>
+                    <tr><td><b>TSLA</b></td><td>$240.50</td><td><button onclick="buyStock('TSLA')">Buy</button></td></tr>
+                    <tr><td><b>NVDA</b></td><td>$480.10</td><td><button onclick="buyStock('NVDA')">Buy</button></td></tr>
+                </tbody>
+            </table>
+        </div>
+           <h1 style="padding-left: 22%; margin-top: 20px;text-decoration: underline;color: rgb(48, 110, 110);">|| TRENDING AND FIREY LATEST NEWS  ||</h1>
+        <section class="ncards">
+         
+            <div class="ncard">
+               <a href="https://timesofindia.indiatimes.com/business/india-business/stock-market-crash-today-why-has-nifty50-bse-sensex-crashed-in-the-last-5-trading-sessions-january-09-2026-top-reasons-explained/articleshow/126431275.cms" target="_blank" ><img src="news1.png" alt="news1 image"></a>
+             <hr> <caption><h2>Stock market crash today : Why has sensex unpluged over 2100 points , Nifity down over 2% in 5 days ?</h2></caption>
+            </div>
+            <div class="ncard">
+                  <a href="https://www.cnbctv18.com/market/us-stock-market-live-updates-dow-jones-nasdaq-today-sp-500-stock-market-trend-trump-tariff-verdict-supreme-court-us-jobs-report-liveblog-19817787.htm" target="_blank" ><img src="news2.png" alt=""></a>
+            <hr><caption><h2>US Stock Market LIVE Updates: US Supreme Court delays ruling on tariffs</h2>
+            </caption>
+                </div>
+                
+            <div class="ncard">
+                  <a href="https://in.investing.com/news/stock-market-news/intel-alibaba-among-market-cap-stock-movers-on-friday-93CH-5181154" target="_blank"><img src="news3.png" alt=""></a>
+             <hr><caption><h2>Intel, Alibaba among market cap stock movers on Friday</h2></caption>
+                </div>
+            <div class="ncard">
+                  <a href="https://upstox.com/news/market-news/stocks/coal-india-share-price-gains-12-percent-in-1-month-arm-bccls-ipo-opens-january-9-things-to-know-before-the-ipo-launch/article-187468/" target="_blank"><img src="news4.png" alt=""></a>
+            <hr><caption><h2>Coal India share price gains 12% in 1 month, arm BCCL’s IPO opens: Things to know before the IPO launch</h2></caption>
+                </div>
+               
+            <div class="ncard">
+                  <a href="https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRGx6TVdZU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen" target="_blank"><img src="news5.png" alt=""></a>
+            <hr><caption><h2>Coal India share price gains 12% in 1 month, arm BCCL’s IPO opens: Things to know before the IPO launch</h2></caption>
+                </div>
+            <div class="ncard">
+                  <a href="https://www.reuters.com/world/india/ambanis-reliance-jio-considers-25-public-offering-2026-india-ipo-sources-say-2026-01-09/" target="_blank"><img src="news6.png" alt=""></a>
+           <hr><caption><h2>Ambani's Reliance Jio considers 2.5% public offering in 2026 India IPO, sources say</h2></caption>
+                </div>
+              
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="logo">Stock<span>Dash</span></div>
+                <p>The world's most advanced retail trading dashboard. Real-time data, instant execution.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li>Help Center</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms of Service</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>📧 support@stockdash.com</p>
+                <p>📞 +1 (555) 000-1234</p>
+                <p>📍 Wall Street, NY</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 StockDash Portfolio Tracker. All rights reserved.
+        </div>
+    </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
